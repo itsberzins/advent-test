@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="A little advent calendar made with love.">
+  <title>Our December Countdown</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow" id="eyebrow">A little something for every day</p>
+      <h1>Our December Countdown</h1>
+      <p class="subtitle" id="subtitle">24 tiny surprises, one for each day until Christmas.</p>
+
+      <div class="progress-wrap" aria-label="Calendar progress">
+        <div class="progress-text">
+          <span id="progressText">0 of 24 opened</span>
+          <span id="progressHint">one door at a time</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="calendar" id="calendarGrid" aria-label="Advent calendar"></section>
+
+    <footer class="footer">
+      <p>Made with love <span class="heart" aria-hidden="true">♥</span></p>
+      <button class="reset-button" id="resetButton" type="button" hidden>Reset calendar</button>
+    </footer>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" id="closeButton" type="button" aria-label="Close surprise">&times;</button>
+      <p class="modal-day" id="modalDay"></p>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
